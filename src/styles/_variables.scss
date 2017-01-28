@@ -1,0 +1,30 @@
+
+// Colours
+$agn-btn-clear-bg:          #fdfdfd;
+$agn-btn-clear-colour:      #11508f;
+$agn-btn-secondary-bg:      #f2f2f2;
+$agn-btn-secondary-colour:  #11508f;
+$agn-btn-primary-bg:        #005996;
+$agn-btn-primary-colour:    #fff;
+$agn-btn-third-bg:          #575757;
+$agn-btn-third-colour:      #fff;
+$agn-btn-secure-bg:         #2a6433;
+$agn-btn-secure-colour:     #fff;
+$agn-btn-push-bg:           #fc3;
+$agn-btn-push-colour:       #333;
+
+
+// Bootstrap overides
+$font-family-sans-serif: 'Ubuntu', sans-serif;
+
+$enable-shadows: true;
+
+$body-bg: #e5e5e5;
+
+$btn-primary-color:              $agn-btn-primary-colour;
+$btn-primary-bg:                 $agn-btn-primary-bg;
+$btn-primary-border:             $agn-btn-primary-bg;
+
+$btn-secondary-color:            $agn-btn-secondary-colour;
+$btn-secondary-bg:               $agn-btn-secondary-bg;
+$btn-secondary-border:           $agn-btn-secondary-bg;

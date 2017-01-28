@@ -1,0 +1,16 @@
+
+.btn-clear {
+  @include button-variant($agn-btn-clear-colour, $agn-btn-clear-bg, $agn-btn-clear-bg);
+}
+
+.btn-third {
+  @include button-variant($agn-btn-third-colour, $agn-btn-third-bg, $agn-btn-third-bg);
+}
+
+.btn-secure {
+  @include button-variant($agn-btn-secure-colour, $agn-btn-secure-bg, $agn-btn-secure-bg);
+}
+
+.btn-push {
+  @include button-variant($agn-btn-push-colour, $agn-btn-push-bg, $agn-btn-push-bg);
+}

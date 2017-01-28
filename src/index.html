@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Aegon Dashboard</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <link href="css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <a class="skip-navigation" href="#main">Skip to main</a>
+  </header>
+
+  <section>
+
+    <header class="section-header">
+      <div class="container">
+        <h1>Aegon Dashboard</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+
+        <main id="main" tabindex="-1" class="col-lg-7">
+
+          <div class="card">
+
+            <div class="card-block">
+
+              <h2>Sign in</h2>
+
+              <form action="/dashboard.html" novalidate>
+                <div class="alert alert-danger invisible-x" role="alert">
+                  Sorry, we don't recognise these details. Please try again.
+                </div>
+                <div class="form-group">
+                  <label class="sr-only" for="username">Username or Email address</label>
+                  <input type="text" name="username" id="username" class="form-control" minlength="3" maxlength="128" required placeholder="Username or Email address" />
+                </div>
+
+                <div class="form-group">
+                  <label class="sr-only" for="password">Password</label>
+                  <input type="password" name="password" id="password" class="form-control" minlength="6" maxlength="64" required placeholder="Password" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign in to your dashboard</button>
+
+              </form>
+
+              <a href="#" class="btn btn-text">Trouble signing in?</a>
+
+            </div>
+
+          </div>
+
+          <div class="card">
+
+            <div class="card-block">
+
+              <h3>Why sign in</h3>
+              <h4 class="h6">Lorem ipsum dolor sit amet, consectetur adipiscing.</h4>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Mauris cursus gravida odio sed porta.</li>
+                <li>Quisque lacinia, lorem quis sodales lobortis, urna ipsum porttitor neque.</li>
+                <li>At pretium mauris turpis blandit felis.</li>
+                <li>Vivamus mollis at mauris.</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </main>
+
+        <aside class="col-lg-5">
+
+          <div class="card">
+            <img class="card-img-top" src="https://placehold.it/420x180?text=21:9+ratio+image" alt="Card image cap">
+            <div class="card-block">
+              <h2>Heading 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus gravida odio sed porta. Quisque lacinia, lorem quis sodales lobortis, urna ipsum porttitor neque, at pretium mauris turpis blandit felis. Vivamus mollis at mauris sit amet volutpat.</p>
+              <a href="#" class="btn btn-clear">CTA Link</a>
+            </div>
+          </div>
+
+
+          <nav class="card navigation" aria-label="related">
+            <div class="card-block">
+              <h3 class="sr-only">Heading 3</h3>
+              <ul>
+                <li><a href="#">CTA link/button if needed</a></li>
+              </ul>
+            </div>
+          </nav>
+        </aside>
+
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p>FOOTER</p>
+    </div>
+  </footer>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
