@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -33,38 +33,53 @@
 
             <div class="card-block">
 
-              <h2>Sign in</h2>
-
               <form action="/dashboard.html" novalidate>
-                <div class="alert alert-danger invisible-x" role="alert">
-                  Sorry, we don't recognise these details. Please try again.
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="username">Username or Email address</label>
-                  <input type="text" name="username" id="username" class="form-control" minlength="3" maxlength="128" required placeholder="Username or Email address" />
-                </div>
 
-                <div class="form-group">
-                  <label class="sr-only" for="password">Password</label>
-                  <input type="password" name="password" id="password" class="form-control" minlength="6" maxlength="64" required placeholder="Password" />
-                </div>
+                <fieldset>
 
-                <button type="submit" class="btn btn-primary">Sign in to your dashboard</button>
+                  <legend>Sign in</legend>
+
+                  <section class="alert alert-danger hidden" role="alert" id="errorMessage" aria-live="assertive" tabindex="-1">
+                    Sorry, we don't recognise these details. Please try again.
+                  </section>
+                  <div class="form-group form-floating-label">
+                    <label for="username">Username or Email address</label>
+                    <input type="email" name="username" id="username" class="form-control" data-minlength="3" data-validation-type="email" maxlength="128" required placeholder="Username or Email address" />
+                  </div>
+
+                  <label for="password">Password</label>
+                  <div class="input-group">
+                    <input type="password" name="password" id="password" class="form-control" data-minlength="6" data-validation-type="password" maxlength="64" required placeholder="Password" />
+                    <span class="input-group-addon js-visible">
+                      <button class="form-control btn-svg btn-svg-eye btn-svg-eye-off" id="togglePassword" data-target="#password" data-class-off="btn-svg-eye-off" type="button" aria-label="Show password" data-aria-hide="Hide password">
+                        <svg preserveAspectRatio="xMidYMid" width="24" height="21.906" viewBox="0 0 24 21.906">
+                          <path d="M12.000,18.000 C4.205,18.000 0.000,11.612 0.000,9.000 C0.000,6.388 4.205,0.000 12.000,0.000 C19.795,0.000 24.000,6.388 24.000,9.000 C24.000,11.612 19.795,18.000 12.000,18.000 ZM12.000,2.000 C5.216,2.000 2.000,7.615 2.000,9.000 C2.000,10.385 5.216,16.000 12.000,16.000 C18.784,16.000 22.000,10.385 22.000,9.000 C22.000,7.615 18.784,2.000 12.000,2.000 ZM12.000,14.000 C9.243,14.000 7.000,11.757 7.000,9.000 C7.000,6.243 9.243,4.000 12.000,4.000 C14.757,4.000 17.000,6.243 17.000,9.000 C17.000,11.757 14.757,14.000 12.000,14.000 ZM12.000,6.000 C10.346,6.000 9.000,7.346 9.000,9.000 C9.000,10.654 10.346,12.000 12.000,12.000 C13.654,12.000 15.000,10.654 15.000,9.000 C15.000,7.346 13.654,6.000 12.000,6.000 Z" class="eye-on"/>
+                          <path d="M2.718,21.603 C2.523,21.798 2.267,21.895 2.011,21.895 C1.755,21.895 1.499,21.798 1.304,21.603 C0.913,21.215 0.913,20.584 1.304,20.195 L4.385,17.126 C1.116,15.035 -0.000,12.142 -0.000,10.939 C-0.000,8.338 4.205,1.976 12.000,1.976 C15.002,1.976 16.895,2.883 17.942,3.624 L21.304,0.276 C21.694,-0.113 22.327,-0.113 22.718,0.276 C23.108,0.665 23.108,1.296 22.718,1.684 L2.718,21.603 ZM9.312,12.219 L13.291,8.256 C12.890,8.065 12.453,7.952 12.000,7.952 C10.346,7.952 9.000,9.293 9.000,10.940 C9.000,11.388 9.121,11.819 9.312,12.219 ZM12.000,3.968 C5.216,3.968 2.000,9.560 2.000,10.939 C2.000,11.383 2.714,13.858 5.843,15.673 L7.881,13.644 C7.811,13.579 7.729,13.531 7.678,13.445 C7.234,12.688 7.000,11.822 7.000,10.940 C7.000,8.195 9.243,5.961 12.000,5.961 C12.989,5.961 13.940,6.262 14.753,6.800 L16.495,5.065 C15.670,4.557 14.243,3.968 12.000,3.968 ZM11.999,15.918 C11.477,15.918 11.037,15.515 11.002,14.988 C10.966,14.439 11.383,13.965 11.935,13.929 C13.576,13.822 14.895,12.509 15.002,10.874 C15.038,10.326 15.528,9.908 16.065,9.946 C16.616,9.981 17.034,10.455 16.998,11.004 C16.826,13.632 14.705,15.744 12.065,15.917 C12.043,15.918 12.021,15.918 11.999,15.918 ZM9.241,17.581 C10.113,17.799 11.042,17.910 12.000,17.910 C18.784,17.910 22.000,12.319 22.000,10.939 C22.000,10.523 21.567,9.170 20.228,7.647 C19.864,7.232 19.906,6.603 20.322,6.241 C20.737,5.879 21.369,5.921 21.733,6.335 C23.110,7.901 24.000,9.709 24.000,10.939 C24.000,13.540 19.795,19.902 12.000,19.902 C10.877,19.902 9.784,19.771 8.752,19.512 C8.216,19.378 7.892,18.836 8.026,18.303 C8.161,17.769 8.704,17.446 9.241,17.581 Z" class="eye-off"/>
+                        </svg>
+                      </button>
+                    </span>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Sign in to your dashboard</button>
+
+                </fieldset>
 
               </form>
 
-              <a href="#" class="btn btn-text">Trouble signing in?</a>
+              <a href="#trouble-signing-in" class="btn btn-text js-show-element">Trouble signing in?</a>
 
             </div>
 
           </div>
 
-          <div class="card">
+          <article class="card">
 
             <div class="card-block">
 
-              <h3>Why sign in</h3>
-              <h4 class="h6">Lorem ipsum dolor sit amet, consectetur adipiscing.</h4>
+              <header>
+                <h3>Why sign in</h3>
+                <h4 class="h6">Lorem ipsum dolor sit amet, consectetur adipiscing.</h4>
+              </header>
               <ul>
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                 <li>Mauris cursus gravida odio sed porta.</li>
@@ -75,30 +90,48 @@
 
             </div>
 
-          </div>
+          </article>
+
+          <article class="card js-hidden" id="trouble-signing-in">
+            <div class="card-block">
+              <header>
+                <h2>Signing in</h2>
+              </header>
+              <a href="#" class="btn btn-clear btn-block">Forgotten Username</a>
+              <a href="#" class="btn btn-clear btn-block">Forgotten Password</a>
+              <a href="#" class="btn btn-clear btn-block">Not registered? Get access</a>
+            </div>
+          </article>
+
+          <!-- inject forgotten forms/complete messages for trouble here -->
 
         </main>
 
         <aside class="col-lg-5">
 
-          <div class="card">
-            <img class="card-img-top" src="https://placehold.it/420x180?text=21:9+ratio+image" alt="Card image cap">
+          <article class="card card-promo">
+            <img class="card-img-top" src="https://placehold.it/420x180?text=21:9+ratio+image" alt="21:9 ratio image">
             <div class="card-block">
-              <h2>Heading 2</h2>
+              <header>
+                <h2>Heading 2</h2>
+              </header>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus gravida odio sed porta. Quisque lacinia, lorem quis sodales lobortis, urna ipsum porttitor neque, at pretium mauris turpis blandit felis. Vivamus mollis at mauris sit amet volutpat.</p>
               <a href="#" class="btn btn-clear">CTA Link</a>
             </div>
-          </div>
+          </article>
 
 
-          <nav class="card navigation" aria-label="related">
+          <article class="card">
             <div class="card-block">
-              <h3 class="sr-only">Heading 3</h3>
+              <header>
+                <h3 class="sr-only">Heading 3</h3>
+              </header>
               <ul>
                 <li><a href="#">CTA link/button if needed</a></li>
               </ul>
             </div>
-          </nav>
+          </article>
+
         </aside>
 
       </div>

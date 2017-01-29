@@ -2,3 +2,11 @@
   @include sr-only;
   @include sr-only-focusable;
 }
+
+.main:focus:before,
+#errorMessage:focus:before {
+  display: none;
+}
+#errorMessage:focus {
+  box-shadow: $input-box-shadow-focus;
+}

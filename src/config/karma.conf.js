@@ -1,4 +1,4 @@
-module.exports = function (config) {
+module.exports = function karmaConfig(config) {
   config.set({
     basePath: '../scripts/',
     frameworks: [
@@ -6,16 +6,16 @@ module.exports = function (config) {
       'mocha',
     ],
     files: [
-      '**/*.js',
+      'modules/*.js',
     ],
     exclude: [
     ],
     preprocessors: {
-      '**/*.js': [ 'browserify' ],
+      '**/*.js': ['browserify'],
     },
     browserify: {
       debug: true,
-      transform: [ 'babelify' ],
+      transform: ['babelify'],
     },
     reporters: ['spec'],
     port: 9876,

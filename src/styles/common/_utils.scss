@@ -1,0 +1,14 @@
+
+// Bring back the hidden class
+.hidden {
+  display: none;
+}
+.shown {
+  display: block !important;
+}
+
+// Show/hide if js is available
+.no-js .js-visible,
+.js .js-hidden {
+  display: none;
+}

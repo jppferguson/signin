@@ -1,3 +1,6 @@
+.btn {
+  font-family: inherit;
+}
 
 .btn-clear {
   @include button-variant($agn-btn-clear-colour, $agn-btn-clear-bg, $agn-btn-clear-bg);
@@ -13,4 +16,26 @@
 
 .btn-push {
   @include button-variant($agn-btn-push-colour, $agn-btn-push-bg, $agn-btn-push-bg);
+}
+
+/* Show/hide password SVG */
+.btn-svg {
+  background: transparent;
+  border: 0;
+  fill: currentColor;
+  padding: 0;
+}
+
+.btn-svg-eye {
+  .eye-on {
+    opacity: 0;
+  }
+  &.btn-svg-eye-off {
+    .eye-off {
+      opacity: 0;
+    }
+    .eye-on {
+      opacity: 1;
+    }
+  }
 }
