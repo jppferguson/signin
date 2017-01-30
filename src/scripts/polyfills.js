@@ -1,3 +1,4 @@
+/* eslint-disable */
 // For browsers that do not support Element.closest(),
 // but carry support for document.querySelectorAll()
 // <https://developer.mozilla.org/en-US/docs/Web/API/Element/closest>

@@ -1,16 +1,43 @@
-$btn-border-shadow-color: #ccc;
-$btn-border-shadow-distance: 5px;
 // rounded corners disabled except for buttons
 .btn {
   border-radius: $btn-border-radius;
-  box-shadow: 0 $btn-border-shadow-distance 5px rgba($btn-border-shadow-color, .5);
+  border: 0;
   &:hover {
-    box-shadow: 0 $btn-border-shadow-distance 10px rgba($btn-border-shadow-color, .9);
+    box-shadow: $btn-hover-box-shadow;
+  }
+  &:focus {
+    box-shadow: $btn-focus-box-shadow;
+  }
+  &[disabled] {
+    background: $gray-lighter;
+    border: 0;
+    color: $gray;
+  }
+}
+
+.btn-primary {
+  &:hover {
+    background-color: lighten($brand-primary, 5%);
+  }
+  &:active {
+    background-color: darken($brand-primary, 5%);
+  }
+  &:focus {
+    box-shadow: $btn-focus-box-shadow;
   }
 }
 
 .btn-clear {
   @include button-variant($agn-btn-clear-colour, $agn-btn-clear-bg, $agn-btn-clear-bg);
+  &:hover {
+    background-color: lighten($agn-btn-clear-bg, 5%);
+  }
+  &:active {
+    background-color: darken($agn-btn-clear-bg, 5%);
+  }
+  &:focus {
+    box-shadow: $btn-focus-box-shadow;
+  }
 }
 
 .btn-third {

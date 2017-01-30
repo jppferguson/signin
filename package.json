@@ -8,7 +8,7 @@
     "browsersync": "browser-sync start -s src -s .tmp -f 'src/*' -f '.tmp/**'",
     "predev": "npm run build",
     "dev": "npm run browsersync & npm run watch",
-    "build:sass": "node-sass src/styles -o .tmp/css",
+    "build:sass": "node-sass src/styles -o .tmp/css --include-path node_modules/",
     "postbuild:sass": "postcss --use autoprefixer .tmp/css/*.css -d .tmp/css/",
     "prebuild:js": "npm run lint",
     "build:js": "browserify src/scripts/app.js -o .tmp/bundle.js --debug",
