@@ -5,3 +5,30 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+// Make input fields inherit the body font
+.btn,
+input {
+  font-family: inherit;
+}
+
+.columns-dual {
+  padding-left: 0;
+  li {
+    list-style: none;
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: .5rem;
+    &:before {
+      content: '•';
+      position: absolute;
+      left: 0;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    column-count: 2;
+    li {
+      display: inline-block;
+    }
+  }
+}

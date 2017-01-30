@@ -1,5 +1,12 @@
+$btn-border-shadow-color: #ccc;
+$btn-border-shadow-distance: 5px;
+// rounded corners disabled except for buttons
 .btn {
-  font-family: inherit;
+  border-radius: $btn-border-radius;
+  box-shadow: 0 $btn-border-shadow-distance 5px rgba($btn-border-shadow-color, .5);
+  &:hover {
+    box-shadow: 0 $btn-border-shadow-distance 10px rgba($btn-border-shadow-color, .9);
+  }
 }
 
 .btn-clear {

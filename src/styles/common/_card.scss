@@ -1,0 +1,13 @@
+.card {
+  margin-bottom: $card-spacer-y;
+}
+
+.card-transparent {
+  @include card-outline-variant(transparent);
+  color: $gray-light;
+
+  .card-block {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -1,1 +1,73 @@
 
+legend {
+  color: $gray-light;
+}
+
+.form-control,
+.input-group-addon {
+  background: transparent !important;
+  border-width: 0 0 1px;
+  box-shadow: none;
+  padding-left: 0;
+}
+.form-control {
+  margin-top: 2px;
+  &:focus {
+    border-bottom-width: 3px;
+    box-shadow: none;
+    margin-top: 0;
+  }
+}
+label {
+  color: $gray-light;
+  margin-bottom: 0;
+}
+
+.input-group {
+  input.form-control {
+    padding-right: 3em;
+  }
+  .input-group-addon {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+  }
+}
+.has-danger {
+  color: $brand-danger;
+  .form-control {
+    color: inherit;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.loading-spinner {
+  display: inline-block;
+  position: relative;
+
+  margin-left: .5rem;
+  vertical-align: middle;
+  svg {
+    // position: absolute;
+  }
+  .loading-circle {
+    fill: #008000;
+  }
+}
+.js .floating-label {
+  label {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: 180ms ease-in-out;
+    transition-property: opacity transform;
+  }
+  &.floating-label-show label {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 240ms;
+  }
+}

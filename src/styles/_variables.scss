@@ -17,9 +17,15 @@ $agn-btn-push-colour:       #333;
 // Bootstrap overides
 $font-family-sans-serif: 'Ubuntu', sans-serif;
 
+$brand-danger: #b7423e;
+
 $enable-shadows: true;
+$enable-rounded: false;
 
 $body-bg: #e5e5e5;
+
+// buttons
+$btn-border-radius:              .25rem;
 
 $btn-primary-color:              $agn-btn-primary-colour;
 $btn-primary-bg:                 $agn-btn-primary-bg;
@@ -29,4 +35,8 @@ $btn-secondary-color:            $agn-btn-secondary-colour;
 $btn-secondary-bg:               $agn-btn-secondary-bg;
 $btn-secondary-border:           $agn-btn-secondary-bg;
 
+// forms
 $form-icon-danger: none;
+
+// alerts
+$alert-danger-border: $brand-danger;
